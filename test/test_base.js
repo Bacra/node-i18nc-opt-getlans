@@ -4,7 +4,7 @@
 
 var expect = require('expect.js');
 var getlans = require('./i18n_getlans');
-var debug = require('debug')('i18nc-opt-getlans');
+var debug = require('debug')('i18nc-options-getlans');
 
 
 describe('#base', function()

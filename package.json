@@ -1,5 +1,5 @@
 {
-  "name": "i18nc-opt-getlans",
+  "name": "i18nc-options-getlans",
   "version": "1.0.0",
   "description": "Getlans options of i18nc",
   "main": "index.js",
@@ -8,12 +8,12 @@
     "lint": "eslint .",
     "test": "npm run test-e2e",
     "test-e2e": "karma start --",
-    "test-e2e-dev": "cross-env DEBUG=i18nc-opt-getlans* karma start --auto-watch --no-single-run --browsers=Chrome",
+    "test-e2e-dev": "cross-env DEBUG=i18nc-options-getlans* karma start --auto-watch --no-single-run --browsers=Chrome",
     "test-e2e-sauce": "karma start -- sauce"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Bacra/node-i18nc-opt-getlans.git"
+    "url": "git+ssh://git@github.com/Bacra/node-i18nc-options-getlans.git"
   },
   "keywords": [
     "i18n",
@@ -23,9 +23,9 @@
   "author": "Bacra Woo <bacra.woo@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Bacra/node-i18nc-opt-getlans/issues"
+    "url": "https://github.com/Bacra/node-i18nc-options-getlans/issues"
   },
-  "homepage": "https://github.com/Bacra/node-i18nc-opt-getlans",
+  "homepage": "https://github.com/Bacra/node-i18nc-options-getlans",
   "devDependencies": {
     "cross-env": "^5.2.0",
     "debug": "^4.1.0",
