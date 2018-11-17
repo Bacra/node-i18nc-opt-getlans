@@ -1,0 +1,19 @@
+os:
+  - linux
+
+language: node_js
+
+node_js:
+  - lts/*
+
+dist: trusty
+
+env:
+  - MOZ_HEADLESS=1
+
+addons:
+  chrome: stable
+  firefox: latest
+
+script:
+  - npm run test-e2e ChromeHeadlessNoSandbox,FirefoxHeadless
