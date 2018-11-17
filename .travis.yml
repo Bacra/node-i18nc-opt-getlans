@@ -5,15 +5,29 @@ language: node_js
 
 node_js:
   - lts/*
-
-dist: trusty
-
-env:
-  - MOZ_HEADLESS=1
-
-addons:
-  chrome: stable
-  firefox: latest
+  - stable
 
 script:
-  - npm run test-e2e ChromeHeadlessNoSandbox,FirefoxHeadless
+  - npm run lint
+  - npm run test-travis
+
+after_script:
+  - npm install coveralls@2 && cat ./coverage/lcov.info | coveralls
+
+# addons:
+  # for gitsubmodule
+  # ssh_known_hosts:
+    # - 192.30.253.113
+
+matrix:
+  include:
+    - node_js: stable
+      dist: trusty
+      env:
+        - MOZ_HEADLESS=1
+      addons:
+        chrome: stable
+        firefox: latest
+      script:
+        - npm run test-e2e ChromeHeadlessNoSandbox,FirefoxHeadless
+      after_script:

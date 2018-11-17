@@ -2,8 +2,6 @@
 
 var commonConfig = require('karma-config-brcjs');
 
-require('./test/prev_test_files')();
-
 module.exports = function(config)
 {
 	commonConfig(config, require('./package.json'));
@@ -11,7 +9,7 @@ module.exports = function(config)
 	config.set(
 	{
 		basePath: 'test/',
-		files: ['test_*.js'],
-		preprocessors: {'test_*.js': ['browserify']},
+		files: ['browser/test_*.js'],
+		preprocessors: {'browser/test_*.js': ['browserify']},
 	});
 };
